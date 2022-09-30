@@ -1,18 +1,11 @@
-let  estu= document.querySelector("#estu").value;
-let notaFin= 0,menor=10, mayor=0;
+let mes= 20;
+let suma= 0;
+let pago= 10;
 
-for (let i=1; estu>=i; i++){
-    let cali= parseInt(prompt("Ingresar la calificacion de la cafeteria:"));
-    notaFin= notaFin+cali;
+for (let i=1; j=21; i+=1){
+    pago= pago*2;
+    alert('En el mes' +mes+ 'el pago fue de' +pago);
 
-    if (cali>mayor){
-        mayor= cali;
-    }else if (cali<menor){
-        menor= cali;
-    }
-    let pro= notaFin/estu;
-    alert('La calificacion mayor es de:' +mayor);
-    alert('La calificacion menor es de:' +menor);
-
-    alert('El promedio es de:' +pro);
+    let sumPago= pago+mes;
+    alert('El total a pagar por los 20 meses fue de' +sumPago);
 }
