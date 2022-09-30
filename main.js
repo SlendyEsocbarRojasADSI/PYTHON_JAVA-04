@@ -1,11 +1,19 @@
-let mes= 20;
-let suma= 0;
-let pago= 10;
+let vent= Number(prompt("Ingresar el numero de ventas:"));
+let ventMen= 0;
+let ventMedi= 0;
+let ventMayo= 0;
 
-for (let i=1; j=21; i+=1){
-    pago= pago*2;
-    alert('En el mes' +mes+ 'el pago fue de' +pago);
+for (let i; i<=vent; i++){
+    let preci= Number(prompt("Digitar el precio de la venta:"));
 
-    let sumPago= pago+mes;
-    alert('El total a pagar por los 20 meses fue de' +sumPago);
+    if (preci<500){
+        ventMen++
+    } else if (preci>500 && preci<100){
+        ventMedi++
+    } else{
+        ventMayo++
+    }
+    alert('Las ventas menores a 500 fueron:' +ventMen);
+    alert('Las ventas medianos a 1000 pero mayores a 500 fueron:' +ventMedi);
+    alert('Las ventas mayores a 1000 fueron:' +ventMayo);
 }
