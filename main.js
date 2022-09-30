@@ -1,11 +1,11 @@
-addEventListener("DOMContentLoaded", (e)=>{
-    let form= document.querySelector("#form");
-    form.addEventListener("submit", (e)=>{
-        e.preventDefault();
+let num= 3;
 
-        let num= document.querySelector("#num").value;
-        for (let i=1; i<=10; i++){
-            alert('El resultado de multiplicar ${num} por ${i} es de ${numero*i}');
-        }
-    })
-})
+for (let i=1; i<=24;i++){
+    if (i%2==0){
+        num+=4;
+        alert(num);
+    }else{
+        num-=2;
+        alert(num);
+    }
+}
