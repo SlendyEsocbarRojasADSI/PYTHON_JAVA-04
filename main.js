@@ -1,17 +1,16 @@
-let angu= document.querySelector("#angu").value;
-let serie= document.querySelector("#serie").value;
-let res= 0, num= 3, facto= 1;
+let cantNum= Number(prompt("Ingresar la cantidad de numeros que desea hacer el calculo:"));
 
-for (let i=1; i<=serie; i++){
-    for (let j=1; j<=num; j++){
-        facto *= j;
-    }
-    if (i%2==0){
-        res+= (angu*num)/facto;
-        num+= 2;
-    } else{
-        res-= (angu*num)/facto;
-        num+= 2;
-    }
-    alert('El seno del angulo, ${angu} es, ${res}');
+for (let i=1; i<cantNum; i++){
+    num1= Number(prompt("Ingresar el primer numero:"));
+    num2= Number(prompt("Ingresar el segundo numero:"));
+
+    let sum= num1+num2;
+    let res= num1-num2;
+    let multi= num1*num2;
+    let divi= num1/num2;
+
+    alert('El resultado de la suma es de:' +sum);
+    alert('El resultado de la resta es de:' +res);
+    alert('El resultado de la multiplicacion es de:' +multi);
+    alert('El resultado de la division es de:' +divi);
 }
