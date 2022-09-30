@@ -1,16 +1,19 @@
-let cantNum= Number(prompt("Ingresar la cantidad de numeros que desea hacer el calculo:"));
+const iva= 0.16;
+const descu= 0.15;
+const preci= 1000000;
 
-for (let i=1; i<cantNum; i++){
-    num1= Number(prompt("Ingresar el primer numero:"));
-    num2= Number(prompt("Ingresar el segundo numero:"));
+    let total= 0;
+    let canti= Number(prompt("Ingresar la cantidad de productos:"));
 
-    let sum= num1+num2;
-    let res= num1-num2;
-    let multi= num1*num2;
-    let divi= num1/num2;
+    for (let i=1; i<=canti; i++){
+        total+= preci;
+    }
 
-    alert('El resultado de la suma es de:' +sum);
-    alert('El resultado de la resta es de:' +res);
-    alert('El resultado de la multiplicacion es de:' +multi);
-    alert('El resultado de la division es de:' +divi);
-}
+    let totalPagar= total+(total*iva);
+
+    if (totalPagar> 500000){
+        let totalDesc= totalPagar-(totalPagar*descu);
+        alert('El total a pagar es de:' +totalDesc);
+    } else {
+        alert('El total a pagar es de:' +totalPagar);
+    }
